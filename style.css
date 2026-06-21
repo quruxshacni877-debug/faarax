@@ -1,0 +1,86 @@
+/* Habaynta Guud */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #7f8c8d;
+}
+
+/* --- Kani waa Qaybta Flexbox Container --- */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;            /* Wuxuu u oggolaanayaa sanduuqyada inay hoos u dhacaan (wrap) */
+    justify-content: center;    /* Wuxuu dhex-dhigayaa sanduuqyada */
+    gap: 30px;                  /* Masaafada u dhaxaysa sanduuqyada */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Habaynta Sanduuq kasta (Gallery Item) */
+.gallery-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+    width: 280px;               /* Ballaca caadiga ah ee sanduuqa */
+    flex-grow: 1;               /* Wuxuu ka dhigayaa mid la-qabsan kara (Flexible) */
+    flex-shrink: 1;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Muuqaal yar oo dhaqdhaqaaq ah marka mouse-ka la dulsaaro */
+}
+
+/* Habaynta Sawirka sida tusaalaha ah (Oo goobaabin leh border cagaar ah) */
+.gallery-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;         /* Waxay ka dhigaysaa sawirka goobaabin */
+    border: 3px solid #4caf50;  /* Border midab cagaar ah siday tusaalaha ku codsadeen */
+    margin-bottom: 15px;
+}
+
+/* Cinwaanka weyn ee ka hooseeya sawirka */
+.gallery-item h1 {
+    font-size: 1.4rem;
+    color: #2e7d32;             /* Midab cagaar madow ah */
+    margin-bottom: 10px;
+}
+
+/* Qoraalka sharraxaadda (Caption) */
+.gallery-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
